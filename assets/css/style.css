@@ -1,22 +1,22 @@
-
-/* --- 1. Variables (Modern Tech Palette) --- */
+/* --- 1. Variables (Modern Charcoal Palette) --- */
 :root {
-    /* This template uses a professional "Modern Tech" color scheme. */
-    --primary-color: #1A2A4C;   /* Midnight Blue */
-    --secondary-color: #3D5A80; /* Slate Blue */
-    --accent-color: #29B6F6;    /* Vivid Sky Blue */
+    /* Main Colors */
+    --primary-color: #141414;      /* Charcoal Black */
+    --secondary-color: #2B2B2B;    /* Soft Charcoal */
+    --accent-color: #4A90E2;       /* Professional Blue */
 
-    /* --- Shared Variables (These usually don't need to change) --- */
-    --light-bg-color: #F8F9FA;
-    --white-color: #ffffff;
-    --dark-text-color: #343A40;
-    --light-text-color: #6c757d;
-    --card-bg-color: #ffffff;
-    
+    /* Shared Variables */
+    --light-bg-color: #F7F7F7;
+    --white-color: #FFFFFF;
+    --dark-text-color: #222222;
+    --light-text-color: #6B7280;
+    --card-bg-color: #FFFFFF;
+
     /* Fonts */
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Lato', sans-serif;
 }
+
 
 /* --- 2. Base & Reset Styles --- */
 * {
@@ -59,6 +59,7 @@ img {
     height: auto;
 }
 
+
 /* --- 3. Header --- */
 header {
     background: var(--primary-color);
@@ -73,14 +74,17 @@ header h1 {
     font-weight: 700;
     margin-bottom: 15px;
     letter-spacing: 1px;
+    color: var(--white-color);
 }
 
 header p {
     font-size: 1.3rem;
     font-weight: 300;
-    opacity: 0.9;
+    color: #D1D5DB;
+    opacity: 0.95;
     margin-bottom: 35px;
 }
+
 
 /* --- 3.5 Social Icons --- */
 .social-links a {
@@ -96,9 +100,10 @@ header p {
     transform: translateY(-3px);
 }
 
+
 /* --- 4. Navigation --- */
 nav {
-    background-color: rgba(26, 42, 76, 0.95); /* Adjusted for new primary color */
+    background-color: rgba(20, 20, 20, 0.96);
     backdrop-filter: blur(5px);
     position: sticky;
     top: 0;
@@ -138,6 +143,7 @@ nav ul li a:hover::after {
     width: 50%;
 }
 
+
 /* --- 5. Sections --- */
 .section {
     padding: 100px 0;
@@ -163,6 +169,7 @@ nav ul li a:hover::after {
     height: 3px;
     background: var(--accent-color);
 }
+
 
 /* --- 5.1 About Section --- */
 .about-content {
@@ -193,6 +200,7 @@ nav ul li a:hover::after {
     line-height: 1.9;
 }
 
+
 /* --- 5.5 Project Cards --- */
 .projects-grid {
     display: grid;
@@ -202,7 +210,7 @@ nav ul li a:hover::after {
 
 .project-card {
     background: var(--card-bg-color);
-    border-radius: 5px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -211,8 +219,8 @@ nav ul li a:hover::after {
 }
 
 .project-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 .project-card img {
@@ -247,6 +255,8 @@ nav ul li a:hover::after {
     margin-top: auto;
 }
 
+
+/* --- Buttons --- */
 .btn {
     display: inline-block;
     background: var(--primary-color);
@@ -258,11 +268,12 @@ nav ul li a:hover::after {
     transition: all 0.3s ease;
     flex: 1;
     letter-spacing: 0.5px;
-    border: 2px solid transparent;
+    border: 2px solid var(--primary-color);
 }
 
 .btn:hover {
     background: var(--accent-color);
+    border-color: var(--accent-color);
     color: var(--white-color);
     transform: translateY(-2px);
 }
@@ -300,7 +311,7 @@ nav ul li a:hover::after {
 }
 
 .skill-column:not(:last-child) {
-    border-right: 1px solid #e9ecef;
+    border-right: 1px solid #E5E7EB;
 }
 
 .skill-header {
@@ -331,7 +342,7 @@ nav ul li a:hover::after {
     padding: 12px 0;
     font-size: 1.05rem;
     color: var(--dark-text-color);
-    border-bottom: 1px solid #f1f3f5;
+    border-bottom: 1px solid #F1F3F5;
     position: relative;
     padding-left: 25px;
 }
@@ -349,6 +360,7 @@ nav ul li a:hover::after {
 .skill-list li:last-child {
     border-bottom: none;
 }
+
 
 /* --- 7. Contact Form --- */
 #contact .container {
@@ -380,7 +392,7 @@ nav ul li a:hover::after {
 .contact-form textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #D1D5DB;
     border-radius: 5px;
     font-family: var(--font-body);
     font-size: 1rem;
@@ -391,7 +403,7 @@ nav ul li a:hover::after {
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(41, 182, 246, 0.25); /* Adjusted for new accent color */
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.20);
 }
 
 .contact-form button.btn {
@@ -403,6 +415,7 @@ nav ul li a:hover::after {
     border: none;
     cursor: pointer;
 }
+
 
 /* --- 8. Footer --- */
 footer {
@@ -417,28 +430,32 @@ footer p {
     opacity: 0.7;
 }
 
+
 /* --- 9. Responsive Design --- */
 @media (max-width: 992px) {
+
     .skills-table {
         grid-template-columns: 1fr 1fr;
     }
+
     .skill-column:nth-child(2) {
         border-right: none;
     }
 }
 
 @media (max-width: 768px) {
+
     header h1 {
         font-size: 2.8rem;
     }
-    
+
     .about-content {
         flex-direction: column;
         text-align: center;
     }
 
     #projects .container {
-        padding: 0 5px; 
+        padding: 0 5px;
     }
 
     .projects-grid {
@@ -453,7 +470,55 @@ footer p {
 
     .skill-column:not(:last-child) {
         border-right: none;
-        border-bottom: 1px solid #e9ecef;
+        border-bottom: 1px solid #E5E7EB;
         padding-bottom: 30px;
+    }
+}
+
+
+/* --- Mobile Phones --- */
+@media (max-width: 600px) {
+
+    header {
+        padding: 50px 0;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    header p {
+        font-size: 1.05rem;
+    }
+
+    nav ul li a {
+        padding: 12px 10px;
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section h2 {
+        font-size: 2.3rem;
+        margin-bottom: 55px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+    }
+
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .contact-form {
+        padding: 25px;
     }
 }
