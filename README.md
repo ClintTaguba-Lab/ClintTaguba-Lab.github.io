@@ -2,7 +2,7 @@
 
 Welcome! This repository contains my one page data analytics portfolio, where I showcase my projects, skills, and experience.
 
-## About This Portfolio Template
+## About This Portfolio
 
 Through these projects, I demonstrate my ability to:
 - Use SQL and Python to clean, explore, and analyze data
