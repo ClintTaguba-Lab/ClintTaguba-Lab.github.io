@@ -1,12 +1,12 @@
-/* --- 1. Variables (Modern Charcoal Palette) --- */
+/* --- 1. Variables (Forest Green Palette) --- */
 :root {
     /* Main Colors */
-    --primary-color: #141414;      /* Charcoal Black */
-    --secondary-color: #2B2B2B;    /* Soft Charcoal */
-    --accent-color: #4A90E2;       /* Professional Blue */
+    --primary-color: #111D13;      /* Deep Forest Green */
+    --secondary-color: #415D43;    /* Dark Muted Green */
+    --accent-color: #709775;       /* Soft Sage Green */
 
     /* Shared Variables */
-    --light-bg-color: #F7F7F7;
+    --light-bg-color: #F7F8F7;
     --white-color: #FFFFFF;
     --dark-text-color: #222222;
     --light-text-color: #6B7280;
@@ -80,7 +80,7 @@ header h1 {
 header p {
     font-size: 1.3rem;
     font-weight: 300;
-    color: #D1D5DB;
+    color: #DDE5DE;
     opacity: 0.95;
     margin-bottom: 35px;
 }
@@ -103,12 +103,12 @@ header p {
 
 /* --- 4. Navigation --- */
 nav {
-    background-color: rgba(20, 20, 20, 0.96);
+    background-color: rgba(65, 93, 67, 0.97);
     backdrop-filter: blur(5px);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--accent-color);
 }
 
 nav ul {
@@ -187,7 +187,7 @@ nav ul li a:hover::after {
     border-radius: 50%;
     object-fit: cover;
     border: 7px solid var(--white-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(17, 29, 19, 0.15);
 }
 
 .about-text {
@@ -212,7 +212,7 @@ nav ul li a:hover::after {
     background: var(--card-bg-color);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 25px rgba(17, 29, 19, 0.07);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     display: flex;
     flex-direction: column;
@@ -220,7 +220,7 @@ nav ul li a:hover::after {
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 20px 40px rgba(17, 29, 19, 0.15);
 }
 
 .project-card img {
@@ -272,8 +272,8 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-    background: var(--accent-color);
-    border-color: var(--accent-color);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
     color: var(--white-color);
     transform: translateY(-2px);
 }
@@ -285,7 +285,8 @@ nav ul li a:hover::after {
 }
 
 .btn-secondary:hover {
-    background: var(--primary-color);
+    background: var(--accent-color);
+    border-color: var(--accent-color);
     color: var(--white-color);
 }
 
@@ -303,7 +304,7 @@ nav ul li a:hover::after {
     background-color: var(--card-bg-color);
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 10px 40px rgba(17, 29, 19, 0.08);
 }
 
 .skill-column {
@@ -311,7 +312,7 @@ nav ul li a:hover::after {
 }
 
 .skill-column:not(:last-child) {
-    border-right: 1px solid #E5E7EB;
+    border-right: 1px solid #E3E9E3;
 }
 
 .skill-header {
@@ -342,7 +343,7 @@ nav ul li a:hover::after {
     padding: 12px 0;
     font-size: 1.05rem;
     color: var(--dark-text-color);
-    border-bottom: 1px solid #F1F3F5;
+    border-bottom: 1px solid #EEF2EE;
     position: relative;
     padding-left: 25px;
 }
@@ -373,7 +374,7 @@ nav ul li a:hover::after {
     background: var(--card-bg-color);
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 10px 40px rgba(17, 29, 19, 0.08);
 }
 
 .form-group {
@@ -392,7 +393,7 @@ nav ul li a:hover::after {
 .contact-form textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid #D1D5DB;
+    border: 1px solid #CBD5CB;
     border-radius: 5px;
     font-family: var(--font-body);
     font-size: 1rem;
@@ -403,7 +404,7 @@ nav ul li a:hover::after {
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.20);
+    box-shadow: 0 0 0 3px rgba(112, 151, 117, 0.20);
 }
 
 .contact-form button.btn {
@@ -427,7 +428,7 @@ footer {
 }
 
 footer p {
-    opacity: 0.7;
+    opacity: 0.75;
 }
 
 
@@ -443,6 +444,8 @@ footer p {
     }
 }
 
+
+/* --- Tablets --- */
 @media (max-width: 768px) {
 
     header h1 {
@@ -470,7 +473,7 @@ footer p {
 
     .skill-column:not(:last-child) {
         border-right: none;
-        border-bottom: 1px solid #E5E7EB;
+        border-bottom: 1px solid #E3E9E3;
         padding-bottom: 30px;
     }
 }
