@@ -3,19 +3,17 @@
    ========================================================= */
 
 :root {
-    /* Main Brand Colors */
     --primary-color: #507DBC;       /* Main Blue */
-    --secondary-color: #3F669E;     /* Darker Blue */
+    --header-color: #6F98CC;        /* Lighter Header Blue */
+    --secondary-color: #507DBC;     /* Navigation Blue */
     --accent-color: #A1C6EA;        /* Light Blue */
-    --soft-accent-color: #BBD1EA;   /* Soft Blue */
+    --soft-accent-color: #BBD1EA;   /* Pale Blue */
     --pale-color: #DAE3E5;          /* Blue Gray */
 
-    /* Background Colors */
     --light-bg-color: #F8FAFB;
     --white-color: #FFFFFF;
     --card-bg-color: #FFFFFF;
 
-    /* Text Colors */
     --dark-text-color: #1F2933;
     --light-text-color: #5F6B76;
 
@@ -56,12 +54,12 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-    color: var(--primary-color);
+    opacity: 0.85;
 }
 
 img {
@@ -75,7 +73,8 @@ img {
    ========================================================= */
 
 header {
-    background-color: var(--primary-color);
+    background: var(--header-color) !important;
+    background-color: var(--header-color) !important;
     color: var(--white-color);
     padding: 70px 0;
     text-align: center;
@@ -94,7 +93,7 @@ header p {
     font-size: 1.3rem;
     font-weight: 300;
     color: var(--white-color);
-    opacity: 0.9;
+    opacity: 0.95;
     margin-bottom: 35px;
 }
 
@@ -125,11 +124,11 @@ header p {
    ========================================================= */
 
 nav {
+    background: var(--secondary-color);
     background-color: var(--secondary-color);
     position: sticky;
     top: 0;
     z-index: 1000;
-
     border-bottom: 1px solid var(--accent-color);
 }
 
@@ -154,22 +153,19 @@ nav ul li a:hover {
 }
 
 
-/* Navigation Hover Line */
+/* Navigation underline */
 
 nav ul li a::after {
     content: '';
-
     position: absolute;
     bottom: 10px;
     left: 50%;
-
     transform: translateX(-50%);
 
     width: 0;
     height: 2px;
 
     background-color: var(--accent-color);
-
     transition: width 0.4s ease;
 }
 
@@ -186,37 +182,25 @@ nav ul li a:hover::after {
     padding: 100px 0;
 }
 
-/* Gives alternating sections a very subtle background */
-
 .section:nth-of-type(even) {
     background-color: #F3F7FA;
 }
 
 .section h2 {
     text-align: center;
-
     font-family: var(--font-heading);
     font-size: 3rem;
     font-weight: 700;
-
     margin-bottom: 70px;
-
     position: relative;
-
     color: var(--dark-text-color);
 }
 
-
-/* Small blue line underneath headings */
-
 .section h2::after {
     content: '';
-
     position: absolute;
-
     bottom: -20px;
     left: 50%;
-
     transform: translateX(-50%);
 
     width: 70px;
@@ -233,11 +217,9 @@ nav ul li a:hover::after {
 .about-content {
     display: flex;
     align-items: center;
-
     gap: 60px;
 
     max-width: 960px;
-
     margin: 0 auto;
 
     text-align: left;
@@ -246,9 +228,7 @@ nav ul li a:hover::after {
 .profile-photo {
     width: 280px;
     height: 280px;
-
     border-radius: 50%;
-
     object-fit: cover;
 
     border: 7px solid var(--white-color);
@@ -263,23 +243,18 @@ nav ul li a:hover::after {
 
 .about-text p {
     font-size: 1.1rem;
-
     margin-bottom: 15px;
-
     line-height: 1.9;
 }
 
 
 /* =========================================================
-   8. PROJECTS
+   8. PROJECT CARDS
    ========================================================= */
 
 .projects-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(340px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 40px;
 }
 
@@ -287,7 +262,6 @@ nav ul li a:hover::after {
     background-color: var(--card-bg-color);
 
     border-radius: 8px;
-
     overflow: hidden;
 
     border: 1px solid #E2E8EE;
@@ -312,15 +286,12 @@ nav ul li a:hover::after {
 
 .project-card img {
     width: 100%;
-
     height: 220px;
-
     object-fit: cover;
 }
 
 .project-card-content {
     padding: 30px;
-
     flex-grow: 1;
 
     display: flex;
@@ -329,7 +300,6 @@ nav ul li a:hover::after {
 
 .project-card-content h3 {
     font-family: var(--font-heading);
-
     font-size: 1.8rem;
 
     margin-bottom: 15px;
@@ -339,17 +309,13 @@ nav ul li a:hover::after {
 
 .project-card-content p {
     color: var(--light-text-color);
-
     margin-bottom: 30px;
-
     flex-grow: 1;
 }
 
 .project-buttons {
     display: flex;
-
     gap: 15px;
-
     margin-top: auto;
 }
 
@@ -362,7 +328,6 @@ nav ul li a:hover::after {
     display: inline-block;
 
     background-color: var(--primary-color);
-
     color: var(--white-color);
 
     padding: 12px 20px;
@@ -370,7 +335,6 @@ nav ul li a:hover::after {
     border-radius: 5px;
 
     font-weight: 700;
-
     text-align: center;
 
     transition: all 0.3s ease;
@@ -383,9 +347,8 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
-
-    border-color: var(--secondary-color);
+    background-color: #3F669E;
+    border-color: #3F669E;
 
     color: var(--white-color);
 
@@ -405,7 +368,6 @@ nav ul li a:hover::after {
 
 .btn-secondary:hover {
     background-color: var(--accent-color);
-
     border-color: var(--accent-color);
 
     color: var(--dark-text-color);
@@ -449,14 +411,9 @@ nav ul li a:hover::after {
     border-right: 1px solid var(--soft-accent-color);
 }
 
-
-/* Skill Heading */
-
 .skill-header {
     display: flex;
-
     align-items: center;
-
     margin-bottom: 25px;
 }
 
@@ -479,11 +436,10 @@ nav ul li a:hover::after {
 }
 
 
-/* Skill List */
+/* Skills List */
 
 .skill-list {
     list-style: none;
-
     padding-left: 0;
 }
 
@@ -507,7 +463,6 @@ nav ul li a:hover::after {
     position: absolute;
 
     left: 0;
-
     top: 12px;
 
     color: var(--primary-color);
@@ -523,7 +478,7 @@ nav ul li a:hover::after {
 
 
 /* =========================================================
-   11. CONTACT SECTION
+   11. CONTACT FORM
    ========================================================= */
 
 #contact .container {
@@ -563,9 +518,6 @@ nav ul li a:hover::after {
     color: var(--dark-text-color);
 }
 
-
-/* Input Fields */
-
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -587,9 +539,6 @@ nav ul li a:hover::after {
         box-shadow 0.3s ease;
 }
 
-
-/* Input Focus */
-
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
@@ -601,7 +550,7 @@ nav ul li a:hover::after {
 }
 
 
-/* Send Message Button */
+/* Contact Button */
 
 .contact-form button.btn {
     width: 100%;
@@ -625,7 +574,7 @@ nav ul li a:hover::after {
    ========================================================= */
 
 footer {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 
     color: var(--white-color);
 
@@ -669,7 +618,6 @@ footer p {
 
     .about-content {
         flex-direction: column;
-
         text-align: center;
     }
 
@@ -720,7 +668,6 @@ footer p {
 
     nav ul li a {
         padding: 12px 10px;
-
         font-size: 0.9rem;
     }
 
@@ -730,7 +677,6 @@ footer p {
 
     .section h2 {
         font-size: 2.3rem;
-
         margin-bottom: 55px;
     }
 
@@ -744,11 +690,21 @@ footer p {
 
     .profile-photo {
         width: 220px;
-
         height: 220px;
     }
 
     .contact-form {
         padding: 25px;
     }
+}
+
+
+/* =========================================================
+   16. FORCE HEADER COLOR
+   Keep this at the very bottom of the CSS file
+   ========================================================= */
+
+html body header {
+    background: #6F98CC !important;
+    background-color: #6F98CC !important;
 }
