@@ -1,17 +1,23 @@
-/* --- 1. Variables (Modern Blue Palette) --- */
-:root {
-    /* Main Colors */
-    --primary-color: #04080F;      /* Deep Navy / Near Black */
-    --secondary-color: #507DBC;    /* Medium Blue */
-    --accent-color: #A1C6EA;       /* Light Blue */
-    --soft-accent-color: #BBD1EA;  /* Soft Blue */
-    --light-bg-color: #DAE3E5;     /* Pale Blue Gray */
+/* =========================================================
+   1. COLOR PALETTE
+   ========================================================= */
 
-    /* Shared Colors */
+:root {
+    /* Main Brand Colors */
+    --primary-color: #507DBC;       /* Main Blue */
+    --secondary-color: #3F669E;     /* Darker Blue */
+    --accent-color: #A1C6EA;        /* Light Blue */
+    --soft-accent-color: #BBD1EA;   /* Soft Blue */
+    --pale-color: #DAE3E5;          /* Blue Gray */
+
+    /* Background Colors */
+    --light-bg-color: #F8FAFB;
     --white-color: #FFFFFF;
+    --card-bg-color: #FFFFFF;
+
+    /* Text Colors */
     --dark-text-color: #1F2933;
     --light-text-color: #5F6B76;
-    --card-bg-color: #FFFFFF;
 
     /* Fonts */
     --font-heading: 'Playfair Display', serif;
@@ -19,7 +25,10 @@
 }
 
 
-/* --- 2. Base & Reset Styles --- */
+/* =========================================================
+   2. BASE & RESET
+   ========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +43,7 @@ body {
     font-family: var(--font-body);
     font-weight: 400;
     line-height: 1.8;
-    background-color: #F8FAFB;
+    background-color: var(--light-bg-color);
     color: var(--dark-text-color);
 }
 
@@ -61,7 +70,10 @@ img {
 }
 
 
-/* --- 3. Header --- */
+/* =========================================================
+   3. HEADER
+   ========================================================= */
+
 header {
     background-color: var(--primary-color);
     color: var(--white-color);
@@ -81,32 +93,43 @@ header h1 {
 header p {
     font-size: 1.3rem;
     font-weight: 300;
-    color: var(--soft-accent-color);
+    color: var(--white-color);
+    opacity: 0.9;
     margin-bottom: 35px;
 }
 
 
-/* --- 3.5 Social Icons --- */
+/* =========================================================
+   4. SOCIAL ICONS
+   ========================================================= */
+
 .social-links a {
     color: var(--white-color);
     font-size: 1.6rem;
     margin: 0 15px;
-    transition: transform 0.3s ease, color 0.3s ease;
     display: inline-block;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: var(--accent-color);
+    color: var(--pale-color);
     transform: translateY(-3px);
 }
 
 
-/* --- 4. Navigation --- */
+/* =========================================================
+   5. NAVIGATION
+   ========================================================= */
+
 nav {
     background-color: var(--secondary-color);
     position: sticky;
     top: 0;
     z-index: 1000;
+
     border-bottom: 1px solid var(--accent-color);
 }
 
@@ -126,20 +149,28 @@ nav ul li a {
     position: relative;
 }
 
+nav ul li a:hover {
+    color: var(--white-color);
+}
+
+
+/* Navigation Hover Line */
+
 nav ul li a::after {
     content: '';
+
     position: absolute;
     bottom: 10px;
     left: 50%;
+
     transform: translateX(-50%);
+
     width: 0;
     height: 2px;
-    background-color: var(--accent-color);
-    transition: width 0.4s ease;
-}
 
-nav ul li a:hover {
-    color: var(--white-color);
+    background-color: var(--accent-color);
+
+    transition: width 0.4s ease;
 }
 
 nav ul li a:hover::after {
@@ -147,10 +178,15 @@ nav ul li a:hover::after {
 }
 
 
-/* --- 5. Sections --- */
+/* =========================================================
+   6. SECTIONS
+   ========================================================= */
+
 .section {
     padding: 100px 0;
 }
+
+/* Gives alternating sections a very subtle background */
 
 .section:nth-of-type(even) {
     background-color: #F3F7FA;
@@ -158,43 +194,67 @@ nav ul li a:hover::after {
 
 .section h2 {
     text-align: center;
+
     font-family: var(--font-heading);
     font-size: 3rem;
     font-weight: 700;
+
     margin-bottom: 70px;
+
     position: relative;
-    color: var(--primary-color);
+
+    color: var(--dark-text-color);
 }
+
+
+/* Small blue line underneath headings */
 
 .section h2::after {
     content: '';
+
     position: absolute;
+
     bottom: -20px;
     left: 50%;
+
     transform: translateX(-50%);
+
     width: 70px;
     height: 3px;
-    background-color: var(--secondary-color);
+
+    background-color: var(--primary-color);
 }
 
 
-/* --- 5.1 About Section --- */
+/* =========================================================
+   7. ABOUT SECTION
+   ========================================================= */
+
 .about-content {
     display: flex;
     align-items: center;
+
     gap: 60px;
+
     max-width: 960px;
+
     margin: 0 auto;
+
     text-align: left;
 }
 
 .profile-photo {
     width: 280px;
     height: 280px;
+
     border-radius: 50%;
+
     object-fit: cover;
+
     border: 7px solid var(--white-color);
-    box-shadow: 0 10px 30px rgba(4, 8, 15, 0.12);
+
+    box-shadow:
+        0 10px 30px rgba(31, 41, 51, 0.12);
 }
 
 .about-text {
@@ -203,117 +263,182 @@ nav ul li a:hover::after {
 
 .about-text p {
     font-size: 1.1rem;
+
     margin-bottom: 15px;
+
     line-height: 1.9;
 }
 
 
-/* --- 5.5 Project Cards --- */
+/* =========================================================
+   8. PROJECTS
+   ========================================================= */
+
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(340px, 1fr));
+
     gap: 40px;
 }
 
 .project-card {
     background-color: var(--card-bg-color);
+
     border-radius: 8px;
+
     overflow: hidden;
-    border: 1px solid var(--soft-accent-color);
-    box-shadow: 0 8px 25px rgba(4, 8, 15, 0.06);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    border: 1px solid #E2E8EE;
+
+    box-shadow:
+        0 8px 25px rgba(31, 41, 51, 0.06);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
     display: flex;
     flex-direction: column;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(4, 8, 15, 0.14);
+
+    box-shadow:
+        0 20px 40px rgba(31, 41, 51, 0.13);
 }
 
 .project-card img {
     width: 100%;
+
     height: 220px;
+
     object-fit: cover;
 }
 
 .project-card-content {
     padding: 30px;
+
     flex-grow: 1;
+
     display: flex;
     flex-direction: column;
 }
 
 .project-card-content h3 {
     font-family: var(--font-heading);
+
     font-size: 1.8rem;
+
     margin-bottom: 15px;
-    color: var(--primary-color);
+
+    color: var(--dark-text-color);
 }
 
 .project-card-content p {
     color: var(--light-text-color);
+
     margin-bottom: 30px;
+
     flex-grow: 1;
 }
 
 .project-buttons {
     display: flex;
+
     gap: 15px;
+
     margin-top: auto;
 }
 
 
-/* --- Buttons --- */
+/* =========================================================
+   9. BUTTONS
+   ========================================================= */
+
 .btn {
     display: inline-block;
+
     background-color: var(--primary-color);
+
     color: var(--white-color);
+
     padding: 12px 20px;
+
     border-radius: 5px;
+
     font-weight: 700;
+
     text-align: center;
+
     transition: all 0.3s ease;
+
     flex: 1;
+
     letter-spacing: 0.5px;
+
     border: 2px solid var(--primary-color);
 }
 
 .btn:hover {
     background-color: var(--secondary-color);
+
     border-color: var(--secondary-color);
+
     color: var(--white-color);
+
     transform: translateY(-2px);
 }
 
+
+/* Secondary Button */
+
 .btn-secondary {
     background-color: transparent;
+
     color: var(--primary-color);
+
     border: 2px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
     background-color: var(--accent-color);
+
     border-color: var(--accent-color);
-    color: var(--primary-color);
+
+    color: var(--dark-text-color);
 }
 
 
-/* --- 6. Tabular Skills Section --- */
+/* =========================================================
+   10. SKILLS SECTION
+   ========================================================= */
+
 #skills .container {
     max-width: 1100px;
 }
 
 .skills-table {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
+
     margin-top: 50px;
+
     background-color: var(--card-bg-color);
+
     padding: 40px;
+
     border-radius: 8px;
-    border: 1px solid var(--soft-accent-color);
-    box-shadow: 0 10px 40px rgba(4, 8, 15, 0.07);
+
+    border: 1px solid #E2E8EE;
+
+    box-shadow:
+        0 10px 40px rgba(31, 41, 51, 0.07);
 }
 
 .skill-column {
@@ -324,46 +449,71 @@ nav ul li a:hover::after {
     border-right: 1px solid var(--soft-accent-color);
 }
 
+
+/* Skill Heading */
+
 .skill-header {
     display: flex;
+
     align-items: center;
+
     margin-bottom: 25px;
 }
 
 .skill-header i {
     font-size: 2rem;
-    color: var(--secondary-color);
+
+    color: var(--primary-color);
+
     margin-right: 15px;
+
     width: 40px;
 }
 
 .skill-header h3 {
     font-family: var(--font-heading);
+
     font-size: 1.7rem;
-    color: var(--primary-color);
+
+    color: var(--dark-text-color);
 }
+
+
+/* Skill List */
 
 .skill-list {
     list-style: none;
+
     padding-left: 0;
 }
 
 .skill-list li {
     padding: 12px 0;
+
     font-size: 1.05rem;
+
     color: var(--dark-text-color);
+
     border-bottom: 1px solid #E6EDF3;
+
     position: relative;
+
     padding-left: 25px;
 }
 
 .skill-list li::before {
     content: '›';
+
     position: absolute;
+
     left: 0;
+
     top: 12px;
-    color: var(--secondary-color);
+
+    color: var(--primary-color);
+
     font-weight: 700;
+
     font-size: 1.2rem;
 }
 
@@ -372,19 +522,29 @@ nav ul li a:hover::after {
 }
 
 
-/* --- 7. Contact Form --- */
+/* =========================================================
+   11. CONTACT SECTION
+   ========================================================= */
+
 #contact .container {
     max-width: 800px;
 }
 
 .contact-form {
     max-width: 700px;
+
     margin: 0 auto;
+
     background-color: var(--card-bg-color);
+
     padding: 40px;
+
     border-radius: 8px;
-    border: 1px solid var(--soft-accent-color);
-    box-shadow: 0 10px 40px rgba(4, 8, 15, 0.07);
+
+    border: 1px solid #E2E8EE;
+
+    box-shadow:
+        0 10px 40px rgba(31, 41, 51, 0.07);
 }
 
 .form-group {
@@ -393,56 +553,98 @@ nav ul li a:hover::after {
 
 .contact-form label {
     display: block;
+
     margin-bottom: 8px;
+
     font-weight: 500;
+
     font-size: 1rem;
+
     color: var(--dark-text-color);
 }
+
+
+/* Input Fields */
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
+
     padding: 15px;
+
     border: 1px solid var(--soft-accent-color);
+
     border-radius: 5px;
+
     font-family: var(--font-body);
+
     font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    background-color: var(--white-color);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+
+/* Input Focus */
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(80, 125, 188, 0.18);
+
+    border-color: var(--primary-color);
+
+    box-shadow:
+        0 0 0 3px rgba(80, 125, 188, 0.18);
 }
+
+
+/* Send Message Button */
 
 .contact-form button.btn {
     width: 100%;
+
     padding: 15px;
+
     font-size: 1.1rem;
+
     font-weight: 700;
+
     letter-spacing: 0.5px;
+
     border: none;
+
     cursor: pointer;
 }
 
 
-/* --- 8. Footer --- */
+/* =========================================================
+   12. FOOTER
+   ========================================================= */
+
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
+
     color: var(--white-color);
+
     text-align: center;
+
     padding: 40px 0;
+
     margin-top: 80px;
 }
 
 footer p {
-    opacity: 0.75;
+    opacity: 0.8;
 }
 
 
-/* --- 9. Responsive Design --- */
+/* =========================================================
+   13. RESPONSIVE - TABLETS
+   ========================================================= */
+
 @media (max-width: 992px) {
 
     .skills-table {
@@ -455,7 +657,10 @@ footer p {
 }
 
 
-/* --- Tablets --- */
+/* =========================================================
+   14. RESPONSIVE - SMALL TABLETS
+   ========================================================= */
+
 @media (max-width: 768px) {
 
     header h1 {
@@ -464,6 +669,7 @@ footer p {
 
     .about-content {
         flex-direction: column;
+
         text-align: center;
     }
 
@@ -477,19 +683,27 @@ footer p {
 
     .skills-table {
         grid-template-columns: 1fr;
+
         padding: 20px;
+
         gap: 40px;
     }
 
     .skill-column:not(:last-child) {
         border-right: none;
-        border-bottom: 1px solid var(--soft-accent-color);
+
+        border-bottom:
+            1px solid var(--soft-accent-color);
+
         padding-bottom: 30px;
     }
 }
 
 
-/* --- Mobile Phones --- */
+/* =========================================================
+   15. RESPONSIVE - MOBILE
+   ========================================================= */
+
 @media (max-width: 600px) {
 
     header {
@@ -506,6 +720,7 @@ footer p {
 
     nav ul li a {
         padding: 12px 10px;
+
         font-size: 0.9rem;
     }
 
@@ -515,6 +730,7 @@ footer p {
 
     .section h2 {
         font-size: 2.3rem;
+
         margin-bottom: 55px;
     }
 
@@ -528,6 +744,7 @@ footer p {
 
     .profile-photo {
         width: 220px;
+
         height: 220px;
     }
 
