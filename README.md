@@ -7,7 +7,7 @@ Welcome! This repository contains my one page data analytics portfolio, where I 
 Through these projects, I demonstrate my ability to:
 - Use SQL and Python to clean, explore, and analyze data
 - Present findings through clear data visualization and storytelling
-- Build interactive dashboards using Power BI and Tableau
+- Build interactive dashboards
 - Turn data insights into practical business recommendations
 
 ## 🚀 Projects
