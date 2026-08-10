@@ -1,14 +1,14 @@
 # Clinton Taguba - Data Analysis Portfolio
 
-Welcome! This repository contains the complete template for a professional, one-page data analysis portfolio website, hosted for free on GitHub Pages.
+Welcome! This repository contains my one page data analytics portfolio, where I showcase my projects, skills, and experience.
 
 ## About This Portfolio Template
 
-This portfolio is designed to demonstrate skills in:
-- Data visualization and storytelling
-- Data modeling and analysis
-- Creating interactive, professional dashboards
-- Transforming complex data into actionable insights
+Through these projects, I demonstrate my ability to:
+- Use SQL and Python to clean, explore, and analyze data
+- Present findings through clear data visualization and storytelling
+- Build interactive dashboards using Power BI and Tableau
+- Turn data insights into practical business recommendations
 
 ## 🚀 Projects
 
