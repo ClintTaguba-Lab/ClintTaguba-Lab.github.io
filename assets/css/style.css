@@ -1,15 +1,16 @@
-/* --- 1. Variables (Forest Green Palette) --- */
+/* --- 1. Variables (Modern Blue Palette) --- */
 :root {
     /* Main Colors */
-    --primary-color: #111D13;      /* Deep Forest Green */
-    --secondary-color: #415D43;    /* Dark Muted Green */
-    --accent-color: #709775;       /* Soft Sage Green */
+    --primary-color: #04080F;      /* Deep Navy / Near Black */
+    --secondary-color: #507DBC;    /* Medium Blue */
+    --accent-color: #A1C6EA;       /* Light Blue */
+    --soft-accent-color: #BBD1EA;  /* Soft Blue */
+    --light-bg-color: #DAE3E5;     /* Pale Blue Gray */
 
-    /* Shared Variables */
-    --light-bg-color: #F7F8F7;
+    /* Shared Colors */
     --white-color: #FFFFFF;
-    --dark-text-color: #222222;
-    --light-text-color: #6B7280;
+    --dark-text-color: #1F2933;
+    --light-text-color: #5F6B76;
     --card-bg-color: #FFFFFF;
 
     /* Fonts */
@@ -33,7 +34,7 @@ body {
     font-family: var(--font-body);
     font-weight: 400;
     line-height: 1.8;
-    background-color: var(--light-bg-color);
+    background-color: #F8FAFB;
     color: var(--dark-text-color);
 }
 
@@ -46,12 +47,12 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--accent-color);
+    color: var(--secondary-color);
     transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-    opacity: 0.8;
+    color: var(--primary-color);
 }
 
 img {
@@ -62,7 +63,7 @@ img {
 
 /* --- 3. Header --- */
 header {
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     color: var(--white-color);
     padding: 70px 0;
     text-align: center;
@@ -80,8 +81,7 @@ header h1 {
 header p {
     font-size: 1.3rem;
     font-weight: 300;
-    color: #DDE5DE;
-    opacity: 0.95;
+    color: var(--soft-accent-color);
     margin-bottom: 35px;
 }
 
@@ -103,8 +103,7 @@ header p {
 
 /* --- 4. Navigation --- */
 nav {
-    background-color: rgba(65, 93, 67, 0.97);
-    backdrop-filter: blur(5px);
+    background-color: var(--secondary-color);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -139,6 +138,10 @@ nav ul li a::after {
     transition: width 0.4s ease;
 }
 
+nav ul li a:hover {
+    color: var(--white-color);
+}
+
 nav ul li a:hover::after {
     width: 50%;
 }
@@ -147,6 +150,10 @@ nav ul li a:hover::after {
 /* --- 5. Sections --- */
 .section {
     padding: 100px 0;
+}
+
+.section:nth-of-type(even) {
+    background-color: #F3F7FA;
 }
 
 .section h2 {
@@ -167,7 +174,7 @@ nav ul li a:hover::after {
     transform: translateX(-50%);
     width: 70px;
     height: 3px;
-    background: var(--accent-color);
+    background-color: var(--secondary-color);
 }
 
 
@@ -187,7 +194,7 @@ nav ul li a:hover::after {
     border-radius: 50%;
     object-fit: cover;
     border: 7px solid var(--white-color);
-    box-shadow: 0 10px 30px rgba(17, 29, 19, 0.15);
+    box-shadow: 0 10px 30px rgba(4, 8, 15, 0.12);
 }
 
 .about-text {
@@ -209,10 +216,11 @@ nav ul li a:hover::after {
 }
 
 .project-card {
-    background: var(--card-bg-color);
+    background-color: var(--card-bg-color);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(17, 29, 19, 0.07);
+    border: 1px solid var(--soft-accent-color);
+    box-shadow: 0 8px 25px rgba(4, 8, 15, 0.06);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     display: flex;
     flex-direction: column;
@@ -220,7 +228,7 @@ nav ul li a:hover::after {
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(17, 29, 19, 0.15);
+    box-shadow: 0 20px 40px rgba(4, 8, 15, 0.14);
 }
 
 .project-card img {
@@ -259,7 +267,7 @@ nav ul li a:hover::after {
 /* --- Buttons --- */
 .btn {
     display: inline-block;
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     color: var(--white-color);
     padding: 12px 20px;
     border-radius: 5px;
@@ -272,22 +280,22 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-    background: var(--secondary-color);
+    background-color: var(--secondary-color);
     border-color: var(--secondary-color);
     color: var(--white-color);
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background: transparent;
+    background-color: transparent;
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
-    background: var(--accent-color);
+    background-color: var(--accent-color);
     border-color: var(--accent-color);
-    color: var(--white-color);
+    color: var(--primary-color);
 }
 
 
@@ -304,7 +312,8 @@ nav ul li a:hover::after {
     background-color: var(--card-bg-color);
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(17, 29, 19, 0.08);
+    border: 1px solid var(--soft-accent-color);
+    box-shadow: 0 10px 40px rgba(4, 8, 15, 0.07);
 }
 
 .skill-column {
@@ -312,7 +321,7 @@ nav ul li a:hover::after {
 }
 
 .skill-column:not(:last-child) {
-    border-right: 1px solid #E3E9E3;
+    border-right: 1px solid var(--soft-accent-color);
 }
 
 .skill-header {
@@ -323,7 +332,7 @@ nav ul li a:hover::after {
 
 .skill-header i {
     font-size: 2rem;
-    color: var(--accent-color);
+    color: var(--secondary-color);
     margin-right: 15px;
     width: 40px;
 }
@@ -343,7 +352,7 @@ nav ul li a:hover::after {
     padding: 12px 0;
     font-size: 1.05rem;
     color: var(--dark-text-color);
-    border-bottom: 1px solid #EEF2EE;
+    border-bottom: 1px solid #E6EDF3;
     position: relative;
     padding-left: 25px;
 }
@@ -353,7 +362,7 @@ nav ul li a:hover::after {
     position: absolute;
     left: 0;
     top: 12px;
-    color: var(--accent-color);
+    color: var(--secondary-color);
     font-weight: 700;
     font-size: 1.2rem;
 }
@@ -371,10 +380,11 @@ nav ul li a:hover::after {
 .contact-form {
     max-width: 700px;
     margin: 0 auto;
-    background: var(--card-bg-color);
+    background-color: var(--card-bg-color);
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(17, 29, 19, 0.08);
+    border: 1px solid var(--soft-accent-color);
+    box-shadow: 0 10px 40px rgba(4, 8, 15, 0.07);
 }
 
 .form-group {
@@ -393,7 +403,7 @@ nav ul li a:hover::after {
 .contact-form textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid #CBD5CB;
+    border: 1px solid var(--soft-accent-color);
     border-radius: 5px;
     font-family: var(--font-body);
     font-size: 1rem;
@@ -403,8 +413,8 @@ nav ul li a:hover::after {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(112, 151, 117, 0.20);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(80, 125, 188, 0.18);
 }
 
 .contact-form button.btn {
@@ -420,7 +430,7 @@ nav ul li a:hover::after {
 
 /* --- 8. Footer --- */
 footer {
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     color: var(--white-color);
     text-align: center;
     padding: 40px 0;
@@ -473,7 +483,7 @@ footer p {
 
     .skill-column:not(:last-child) {
         border-right: none;
-        border-bottom: 1px solid #E3E9E3;
+        border-bottom: 1px solid var(--soft-accent-color);
         padding-bottom: 30px;
     }
 }
