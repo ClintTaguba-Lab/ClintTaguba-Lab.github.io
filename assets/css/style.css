@@ -260,10 +260,8 @@ nav ul li a:hover::after {
 
 .project-card {
     background-color: var(--card-bg-color);
-
     border-radius: 8px;
     overflow: hidden;
-
     border: 1px solid #E2E8EE;
 
     box-shadow:
@@ -284,6 +282,8 @@ nav ul li a:hover::after {
         0 20px 40px rgba(31, 41, 51, 0.13);
 }
 
+
+/* Default project images */
 .project-card img {
     width: 100%;
     height: 220px;
@@ -292,7 +292,8 @@ nav ul li a:hover::after {
     display: block;
 }
 
-/* Project 4 Preview */
+
+/* Project 4 infographic preview */
 .project-card-four .project-4-image {
     width: 100%;
     height: auto;
@@ -302,6 +303,7 @@ nav ul li a:hover::after {
     margin: 0;
     padding: 0;
 }
+
 
 .project-card-content {
     padding: 30px;
@@ -314,9 +316,7 @@ nav ul li a:hover::after {
 .project-card-content h3 {
     font-family: var(--font-heading);
     font-size: 1.8rem;
-
     margin-bottom: 15px;
-
     color: var(--dark-text-color);
 }
 
