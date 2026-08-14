@@ -23,6 +23,10 @@ This template is set up to showcase your best work. You can easily customize the
 ### Project Title Three
 *A brief description of your project, the tools used, and the key insights derived.*
 
+### Financial Inclusion in the Philippines
+*Analyzing financial access, digital payment adoption and financial behavior
+among Filipino adults using Global Findex 2025 survey data.*
+
 
 ## 🛠️ Skills
 
