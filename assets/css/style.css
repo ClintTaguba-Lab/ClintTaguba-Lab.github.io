@@ -284,12 +284,10 @@ nav ul li a:hover::after {
         0 20px 40px rgba(31, 41, 51, 0.13);
 }
 
-.project-card img {
-    width: 100%;
-    height: auto;
+.project-card img.project-4-image {
     object-fit: contain;
-    display: block;
-    margin: 0;
+    object-position: center;
+    background-color: #ffffff;
 }
 
 .project-card-content {
