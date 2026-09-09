@@ -3,12 +3,14 @@
    ========================================================= */
 
 :root {
-    --primary-color: #507DBC;       /* Main Blue */
-    --header-color: #6F98CC;        /* Lighter Header Blue */
-    --secondary-color: #507DBC;     /* Navigation Blue */
-    --accent-color: #A1C6EA;        /* Light Blue */
-    --soft-accent-color: #BBD1EA;   /* Pale Blue */
-    --pale-color: #DAE3E5;          /* Blue Gray */
+
+    --primary-color: #507DBC;
+    --header-color: #6F98CC;
+    --secondary-color: #507DBC;
+
+    --accent-color: #A1C6EA;
+    --soft-accent-color: #BBD1EA;
+    --pale-color: #DAE3E5;
 
     --light-bg-color: #F8FAFB;
     --white-color: #FFFFFF;
@@ -17,14 +19,13 @@
     --dark-text-color: #1F2933;
     --light-text-color: #5F6B76;
 
-    /* Fonts */
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Lato', sans-serif;
 }
 
 
 /* =========================================================
-   2. BASE & RESET
+   2. RESET
    ========================================================= */
 
 * {
@@ -33,38 +34,60 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
+
     font-family: var(--font-body);
+
     font-weight: 400;
+
     line-height: 1.8;
+
     background-color: var(--light-bg-color);
+
     color: var(--dark-text-color);
+
+    overflow-x: hidden;
 }
 
+
 .container {
+
     width: 90%;
+
     max-width: 1100px;
+
     margin: 0 auto;
+
     padding: 0 20px;
 }
 
+
 a {
+
     text-decoration: none;
+
     color: var(--primary-color);
-    transition: all 0.3s ease-in-out;
+
+    transition: all 0.3s ease;
 }
+
 
 a:hover {
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
+
 img {
+
     max-width: 100%;
-    height: auto;
+
+    display: block;
 }
 
 
@@ -73,39 +96,59 @@ img {
    ========================================================= */
 
 header {
-    background: var(--header-color) !important;
-    background-color: var(--header-color) !important;
+
+    background-color: var(--header-color);
+
     color: var(--white-color);
+
     padding: 70px 0;
+
     text-align: center;
 }
 
+
 header h1 {
+
     font-family: var(--font-heading);
+
     font-size: 4rem;
+
     font-weight: 700;
+
     margin-bottom: 15px;
+
     letter-spacing: 1px;
+
     color: var(--white-color);
 }
 
+
 header p {
+
     font-size: 1.3rem;
+
     font-weight: 300;
+
     color: var(--white-color);
+
     opacity: 0.95;
+
     margin-bottom: 35px;
 }
 
 
 /* =========================================================
-   4. SOCIAL ICONS
+   4. SOCIAL LINKS
    ========================================================= */
 
 .social-links a {
+
     color: var(--white-color);
+
     font-size: 1.6rem;
+
     margin: 0 15px;
+
     display: inline-block;
 
     transition:
@@ -113,8 +156,11 @@ header p {
         color 0.3s ease;
 }
 
+
 .social-links a:hover {
+
     color: var(--pale-color);
+
     transform: translateY(-3px);
 }
 
@@ -124,50 +170,72 @@ header p {
    ========================================================= */
 
 nav {
-    background: var(--secondary-color);
+
     background-color: var(--secondary-color);
+
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
+
     border-bottom: 1px solid var(--accent-color);
 }
 
+
 nav ul {
+
     display: flex;
+
     justify-content: center;
+
+    align-items: center;
+
     list-style: none;
+
     padding: 10px 0;
+
+    flex-wrap: wrap;
 }
 
+
 nav ul li a {
+
     color: var(--white-color);
+
     font-weight: 400;
+
     padding: 15px 25px;
+
     font-size: 1rem;
+
     letter-spacing: 0.5px;
+
     position: relative;
 }
 
-nav ul li a:hover {
-    color: var(--white-color);
-}
-
-
-/* Navigation underline */
 
 nav ul li a::after {
+
     content: '';
+
     position: absolute;
+
     bottom: 10px;
+
     left: 50%;
+
     transform: translateX(-50%);
 
     width: 0;
+
     height: 2px;
 
     background-color: var(--accent-color);
+
     transition: width 0.4s ease;
 }
+
 
 nav ul li a:hover::after {
     width: 50%;
@@ -182,28 +250,44 @@ nav ul li a:hover::after {
     padding: 100px 0;
 }
 
+
 .section:nth-of-type(even) {
     background-color: #F3F7FA;
 }
 
+
 .section h2 {
+
     text-align: center;
+
     font-family: var(--font-heading);
+
     font-size: 3rem;
+
     font-weight: 700;
+
     margin-bottom: 70px;
+
     position: relative;
+
     color: var(--dark-text-color);
 }
 
+
 .section h2::after {
+
     content: '';
+
     position: absolute;
+
     bottom: -20px;
+
     left: 50%;
+
     transform: translateX(-50%);
 
     width: 70px;
+
     height: 3px;
 
     background-color: var(--primary-color);
@@ -211,25 +295,36 @@ nav ul li a:hover::after {
 
 
 /* =========================================================
-   7. ABOUT SECTION
+   7. ABOUT
    ========================================================= */
 
 .about-content {
+
     display: flex;
+
     align-items: center;
+
     gap: 60px;
 
     max-width: 960px;
+
     margin: 0 auto;
 
     text-align: left;
 }
 
+
 .profile-photo {
+
     width: 280px;
+
     height: 280px;
+
     border-radius: 50%;
+
     object-fit: cover;
+
+    flex-shrink: 0;
 
     border: 7px solid var(--white-color);
 
@@ -237,33 +332,72 @@ nav ul li a:hover::after {
         0 10px 30px rgba(31, 41, 51, 0.12);
 }
 
+
 .about-text {
     flex: 1;
 }
 
+
 .about-text p {
+
     font-size: 1.1rem;
+
     margin-bottom: 15px;
+
     line-height: 1.9;
 }
 
 
 /* =========================================================
-   8. PROJECT CARDS
+   8. PROJECTS
    ========================================================= */
 
+.projects-container {
+
+    width: 92%;
+
+    max-width: 1100px;
+}
+
+
+/*
+   IMPORTANT:
+   Two columns are forced here.
+
+   Project 1 | Project 2
+   Project 3 | Project 4
+*/
+
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr) !important;
+
     gap: 40px;
+
     width: 100%;
+
     align-items: stretch;
 }
 
+
+/* Individual card */
+
 .project-card {
+
+    width: 100%;
+
+    min-width: 0;
+
     background-color: var(--card-bg-color);
+
     border-radius: 8px;
+
     overflow: hidden;
+
     border: 1px solid #E2E8EE;
 
     box-shadow:
@@ -274,96 +408,141 @@ nav ul li a:hover::after {
         box-shadow 0.4s ease;
 
     display: flex;
+
     flex-direction: column;
 }
 
+
 .project-card:hover {
-    transform: translateY(-10px);
+
+    transform: translateY(-8px);
 
     box-shadow:
         0 20px 40px rgba(31, 41, 51, 0.13);
 }
 
 
-/* Default project images */
-
-.project-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-
-/* Project 3 Power BI dashboard preview */
-
 /* =========================================================
-   PROJECT 3 - POWER BI PREVIEW
+   PROJECT IMAGES
    ========================================================= */
 
-.project-3-image-wrapper {
+
+/*
+   Default image style for Project 1 and Project 2
+*/
+
+.project-image {
+
     width: 100%;
-    aspect-ratio: 1351 / 851;
-    overflow: hidden;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    object-position: center;
+
     background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    display: block;
 }
 
-.project-card .project-3-image-wrapper .project-3-image {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: none !important;
-    max-height: none !important;
 
-    object-fit: contain !important;
-    object-position: center !important;
+/*
+   Project 3 Power BI dashboard
 
-    margin: 0 !important;
-    padding: 0 !important;
+   Displays the complete dashboard without cropping.
+*/
 
-    display: block !important;
+.project-card-three .project-3-image {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background-color: #FFFFFF;
+
+    display: block;
 }
 
-/* Project 4 infographic preview */
+
+/*
+   Project 4 infographic
+
+   Displays the complete infographic without cropping.
+*/
 
 .project-card-four .project-4-image {
+
     width: 100%;
-    height: auto;
+
+    height: 250px;
+
     object-fit: contain;
+
     object-position: center;
+
+    background-color: #FFFFFF;
+
     display: block;
-    margin: 0;
-    padding: 0;
 }
 
 
+/* =========================================================
+   PROJECT CONTENT
+   ========================================================= */
+
 .project-card-content {
+
     padding: 30px;
-    flex-grow: 1;
+
+    flex: 1;
 
     display: flex;
+
     flex-direction: column;
 }
 
+
 .project-card-content h3 {
+
     font-family: var(--font-heading);
+
     font-size: 1.8rem;
+
+    line-height: 1.4;
+
     margin-bottom: 15px;
+
     color: var(--dark-text-color);
 }
 
+
 .project-card-content p {
+
     color: var(--light-text-color);
+
     margin-bottom: 30px;
+
     flex-grow: 1;
+
+    line-height: 1.8;
 }
 
+
+/* =========================================================
+   PROJECT BUTTONS
+   ========================================================= */
+
 .project-buttons {
+
     display: flex;
+
     gap: 15px;
+
     margin-top: auto;
 }
 
@@ -373,9 +552,15 @@ nav ul li a:hover::after {
    ========================================================= */
 
 .btn {
-    display: inline-block;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
 
     background-color: var(--primary-color);
+
     color: var(--white-color);
 
     padding: 12px 20px;
@@ -383,19 +568,25 @@ nav ul li a:hover::after {
     border-radius: 5px;
 
     font-weight: 700;
+
     text-align: center;
 
     transition: all 0.3s ease;
 
     flex: 1;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 
     border: 2px solid var(--primary-color);
+
+    cursor: pointer;
 }
 
+
 .btn:hover {
+
     background-color: #3F669E;
+
     border-color: #3F669E;
 
     color: var(--white-color);
@@ -404,9 +595,8 @@ nav ul li a:hover::after {
 }
 
 
-/* Secondary Button */
-
 .btn-secondary {
+
     background-color: transparent;
 
     color: var(--primary-color);
@@ -414,8 +604,11 @@ nav ul li a:hover::after {
     border: 2px solid var(--primary-color);
 }
 
+
 .btn-secondary:hover {
+
     background-color: var(--accent-color);
+
     border-color: var(--accent-color);
 
     color: var(--dark-text-color);
@@ -423,14 +616,16 @@ nav ul li a:hover::after {
 
 
 /* =========================================================
-   10. SKILLS SECTION
+   10. SKILLS
    ========================================================= */
 
 #skills .container {
     max-width: 1100px;
 }
 
+
 .skills-table {
+
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -451,21 +646,29 @@ nav ul li a:hover::after {
         0 10px 40px rgba(31, 41, 51, 0.07);
 }
 
+
 .skill-column {
     padding: 0 20px;
 }
+
 
 .skill-column:not(:last-child) {
     border-right: 1px solid var(--soft-accent-color);
 }
 
+
 .skill-header {
+
     display: flex;
+
     align-items: center;
+
     margin-bottom: 25px;
 }
 
+
 .skill-header i {
+
     font-size: 2rem;
 
     color: var(--primary-color);
@@ -475,7 +678,9 @@ nav ul li a:hover::after {
     width: 40px;
 }
 
+
 .skill-header h3 {
+
     font-family: var(--font-heading);
 
     font-size: 1.7rem;
@@ -484,15 +689,17 @@ nav ul li a:hover::after {
 }
 
 
-/* Skills List */
-
 .skill-list {
+
     list-style: none;
+
     padding-left: 0;
 }
 
+
 .skill-list li {
-    padding: 12px 0;
+
+    padding: 12px 0 12px 25px;
 
     font-size: 1.05rem;
 
@@ -501,16 +708,17 @@ nav ul li a:hover::after {
     border-bottom: 1px solid #E6EDF3;
 
     position: relative;
-
-    padding-left: 25px;
 }
 
+
 .skill-list li::before {
+
     content: '›';
 
     position: absolute;
 
     left: 0;
+
     top: 12px;
 
     color: var(--primary-color);
@@ -519,6 +727,7 @@ nav ul li a:hover::after {
 
     font-size: 1.2rem;
 }
+
 
 .skill-list li:last-child {
     border-bottom: none;
@@ -533,7 +742,9 @@ nav ul li a:hover::after {
     max-width: 800px;
 }
 
+
 .contact-form {
+
     max-width: 700px;
 
     margin: 0 auto;
@@ -550,11 +761,22 @@ nav ul li a:hover::after {
         0 10px 40px rgba(31, 41, 51, 0.07);
 }
 
+
+.contact-form > p {
+
+    margin-bottom: 30px;
+
+    color: var(--light-text-color);
+}
+
+
 .form-group {
     margin-bottom: 25px;
 }
 
+
 .contact-form label {
+
     display: block;
 
     margin-bottom: 8px;
@@ -566,8 +788,10 @@ nav ul li a:hover::after {
     color: var(--dark-text-color);
 }
 
+
 .contact-form input,
 .contact-form textarea {
+
     width: 100%;
 
     padding: 15px;
@@ -587,8 +811,10 @@ nav ul li a:hover::after {
         box-shadow 0.3s ease;
 }
 
+
 .contact-form input:focus,
 .contact-form textarea:focus {
+
     outline: none;
 
     border-color: var(--primary-color);
@@ -598,22 +824,15 @@ nav ul li a:hover::after {
 }
 
 
-/* Contact Button */
-
 .contact-form button.btn {
+
     width: 100%;
 
     padding: 15px;
 
     font-size: 1.1rem;
 
-    font-weight: 700;
-
-    letter-spacing: 0.5px;
-
     border: none;
-
-    cursor: pointer;
 }
 
 
@@ -622,6 +841,7 @@ nav ul li a:hover::after {
    ========================================================= */
 
 footer {
+
     background-color: var(--primary-color);
 
     color: var(--white-color);
@@ -633,20 +853,52 @@ footer {
     margin-top: 80px;
 }
 
+
 footer p {
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 
 /* =========================================================
-   13. RESPONSIVE - TABLETS
+   13. TABLET
    ========================================================= */
 
 @media (max-width: 992px) {
 
+    .container {
+        width: 94%;
+    }
+
+
+    /*
+       KEEP PROJECTS AT TWO COLUMNS
+       even on tablets.
+    */
+
+    .projects-grid {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr) !important;
+
+        gap: 24px;
+    }
+
+
+    .project-card-content {
+        padding: 24px;
+    }
+
+
+    .project-card-content h3 {
+        font-size: 1.6rem;
+    }
+
+
     .skills-table {
         grid-template-columns: 1fr 1fr;
     }
+
 
     .skill-column:nth-child(2) {
         border-right: none;
@@ -655,7 +907,7 @@ footer p {
 
 
 /* =========================================================
-   14. RESPONSIVE - SMALL TABLETS
+   14. SMALL TABLET
    ========================================================= */
 
 @media (max-width: 768px) {
@@ -664,20 +916,58 @@ footer p {
         font-size: 2.8rem;
     }
 
+
     .about-content {
+
         flex-direction: column;
+
         text-align: center;
     }
 
-    #projects .container {
-        padding: 0 5px;
-    }
+
+    /*
+       STILL TWO COLUMNS HERE.
+       This prevents premature stacking.
+    */
 
     .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr) !important;
+
+        gap: 18px;
     }
 
+
+    .project-card-content {
+        padding: 20px;
+    }
+
+
+    .project-card-content h3 {
+        font-size: 1.4rem;
+    }
+
+
+    .project-buttons {
+
+        gap: 10px;
+
+        flex-direction: column;
+    }
+
+
+    .project-image,
+    .project-card-three .project-3-image,
+    .project-card-four .project-4-image {
+
+        height: 200px;
+    }
+
+
     .skills-table {
+
         grid-template-columns: 1fr;
 
         padding: 20px;
@@ -685,7 +975,9 @@ footer p {
         gap: 40px;
     }
 
+
     .skill-column:not(:last-child) {
+
         border-right: none;
 
         border-bottom:
@@ -697,62 +989,94 @@ footer p {
 
 
 /* =========================================================
-   15. RESPONSIVE - MOBILE
+   15. MOBILE
    ========================================================= */
 
-@media (max-width: 600px) {
+/*
+   Cards only stack when the screen is actually small.
+*/
+
+@media (max-width: 520px) {
 
     header {
+
         padding: 50px 0;
     }
+
 
     header h1 {
         font-size: 2.4rem;
     }
 
+
     header p {
         font-size: 1.05rem;
     }
 
+
     nav ul li a {
+
         padding: 12px 10px;
+
         font-size: 0.9rem;
     }
+
 
     .section {
         padding: 70px 0;
     }
 
+
     .section h2 {
+
         font-size: 2.3rem;
+
         margin-bottom: 55px;
     }
 
+
+    /*
+       Only here do projects stack.
+    */
+
     .projects-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 30px;
     }
 
+
+    .project-card-content {
+
+        padding: 25px;
+    }
+
+
     .project-buttons {
+
         flex-direction: column;
     }
 
-    .profile-photo {
-        width: 220px;
+
+    .project-image,
+    .project-card-three .project-3-image,
+    .project-card-four .project-4-image {
+
         height: 220px;
     }
 
+
+    .profile-photo {
+
+        width: 220px;
+
+        height: 220px;
+    }
+
+
     .contact-form {
+
         padding: 25px;
     }
-}
-
-
-/* =========================================================
-   16. FORCE HEADER COLOR
-   Keep this at the very bottom of the CSS file
-   ========================================================= */
-
-html body header {
-    background: #6F98CC !important;
-    background-color: #6F98CC !important;
 }
