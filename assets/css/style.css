@@ -296,7 +296,7 @@ nav ul li a:hover::after {
 
 /* Project 3 Power BI dashboard preview */
 
-.project-card img.project-3-image {
+.project-card-three .project-3-image {
     width: 100%;
     height: 220px;
     object-fit: contain;
