@@ -296,41 +296,11 @@ nav ul li a:hover::after {
 
 /* Project 3 Power BI dashboard preview */
 
-.project-card-three .project-3-image {
+.project-card img.project-3-image {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1351 / 851;
     object-fit: contain;
-    object-position: center;
     display: block;
-    margin: 0;
-    padding: 0;
-}
-
-.project-card-content {
-    padding: 30px;
-    flex-grow: 1;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.project-card-content h3 {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: var(--dark-text-color);
-}
-
-.project-card-content p {
-    color: var(--light-text-color);
-    margin-bottom: 30px;
-    flex-grow: 1;
-}
-
-.project-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: auto;
 }
 
 /* Project 4 infographic preview */
