@@ -298,13 +298,12 @@ nav ul li a:hover::after {
 
 .project-card-three .project-3-image {
     width: 100%;
-    height: 220px;
+    height: auto;
     object-fit: contain;
     object-position: center;
     display: block;
     margin: 0;
     padding: 0;
-    background-color: #FFFFFF;
 }
 
 
