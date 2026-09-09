@@ -296,11 +296,22 @@ nav ul li a:hover::after {
 
 /* Project 3 Power BI dashboard preview */
 
-.project-card img.project-3-image {
+.project-card img:not(.project-3-image):not(.project-4-image) {
     width: 100%;
-    aspect-ratio: 1351 / 851;
-    object-fit: contain;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
     display: block;
+}
+
+.project-3-image {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 /* Project 4 infographic preview */
