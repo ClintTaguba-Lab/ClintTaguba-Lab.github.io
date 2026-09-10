@@ -426,68 +426,41 @@ nav ul li a:hover::after {
    PROJECT IMAGES
    ========================================================= */
 
-
-/*
-   Default image style for Project 1 and Project 2
-*/
-
+/* Base project image style */
 .project-image {
-
     width: 100%;
+    max-width: 100%;
+    display: block;
+    background-color: #FFFFFF;
+}
 
+/* Project 1 and Project 2 */
+.project-card:not(.project-card-three):not(.project-card-four) .project-image {
     height: 250px;
-
     object-fit: cover;
-
     object-position: center;
-
-    background-color: #FFFFFF;
-
-    display: block;
 }
 
-
-/*
-   Project 3 Power BI dashboard
-
-   Displays the complete dashboard without cropping.
-*/
-
+/* Project 3 Power BI dashboard */
 .project-card-three .project-3-image {
-
-    width: 100%;
-
-    height: 250px;
-
-    object-fit: contain;
-
-    object-position: center;
-
-    background-color: #FFFFFF;
-
-    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0;
+    padding: 0;
 }
 
-
-/*
-   Project 4 infographic
-
-   Displays the complete infographic without cropping.
-*/
-
+/* Project 4 infographic */
 .project-card-four .project-4-image {
-
-    width: 100%;
-
-    height: 250px;
-
-    object-fit: contain;
-
-    object-position: center;
-
-    background-color: #FFFFFF;
-
-    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -958,10 +931,7 @@ footer p {
     }
 
 
-    .project-image,
-    .project-card-three .project-3-image,
-    .project-card-four .project-4-image {
-
+    .project-card:not(.project-card-three):not(.project-card-four) .project-image {
         height: 200px;
     }
 
@@ -1059,10 +1029,7 @@ footer p {
     }
 
 
-    .project-image,
-    .project-card-three .project-3-image,
-    .project-card-four .project-4-image {
-
+    .project-card:not(.project-card-three):not(.project-card-four) .project-image {
         height: 220px;
     }
 
