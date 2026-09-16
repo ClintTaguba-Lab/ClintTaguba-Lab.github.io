@@ -12,7 +12,6 @@ Through these projects, I demonstrate my ability to:
 
 ## 🚀 Projects
 
-This template is set up to showcase your best work. You can easily customize the project cards in the `index.html` file.
 
 ### Project Title One
 *A brief description of your project, the tools used, and the key insights derived.*
@@ -30,7 +29,6 @@ among Filipino adults using Global Findex 2025 survey data.*
 
 ## 🛠️ Skills
 
-Update the `index.html` file to reflect your personal technical skillset. The template is organized into key categories:
 
 - **Data Visualization**: Power BI, Tableau, Matplotlib, etc.
 - **Data Analysis**: SQL, Python (Pandas), R, Excel, etc.
